@@ -1,1 +1,40 @@
-theme: jekyll-theme-architect
+#title: 我的博客
+#author: openbigger
+#email: li.li@li.com
+#description: 就是我的博客
+#twitter_username: jekyllrb
+#github_username:  jekyll
+
+#rss: rss
+#theme: minima
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+locale                   : "zh-CN"
+title                    : "网站标题"
+title_separator          : "|"
+name                     : "我的名字"
+description              : "网站描述巴拉巴拉巴拉巴拉"
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
