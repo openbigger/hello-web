@@ -1,14 +1,5 @@
-#title: 我的博客
-#author: openbigger
-#email: li.li@li.com
-#description: 就是我的博客
-#twitter_username: jekyllrb
-#github_username:  jekyll
-
-#rss: rss
-#theme: minima
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin: "air" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 locale                   : "zh-CN"
 title                    : "网站标题"
 title_separator          : "|"
@@ -38,3 +29,13 @@ defaults:
       comments: # true
       share: true
       related: true
+defaults:
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      sidebar:
+        nav: "docs"
+
+include: ["_pages"]        
