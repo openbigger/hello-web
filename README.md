@@ -9,7 +9,8 @@
     2. [在本地搭建预览环境](#在本地搭建预览环境)
     1. [选择主题及其设置](#选择主题及其设置)
     1. [添加博客内容](#添加博客内容)
-    
+- ## [minimal mistake主题设置笔记](# minimal-mistake主题设置笔记)    
+- ## [有用外链](#有用外链)
 
 > :bulb:目录写法
 - ```[目录里面的字](#要跳转到的字)```
@@ -27,12 +28,17 @@
 - 免费
 - 静态页面
 - 插件
+- 广告
+- 评论
+- 登录（不是很确定）
 - 本机测试 
 - 支持Markdown、html
 ### 不可以:x:
-- 不支持 PHP, Ruby, or Python（然而可以用这些来写）
-- repo不能私有
-- 不能超过1GB，访问量也有限制
+- 动态网站PHP, Ruby, or Python（然而可以用这些来写）
+- repo私有
+- 数据库
+- 超过1GB，访问量也有限制
+- 违法的
 ## 选择哪种主题
 主题可有很多选择如：Jekyll、hexo。先看看网上那些主题，有没有自己想要的。官方推的是[Jekyll](https://jekyllcn.com/)(google翻译的杰基尔:full_moon_with_face:)。
 ![avatar](https://jekyllcn.com/img/octojekyll.png)
@@ -41,7 +47,7 @@
 >In this course, you’ll learn how to:
 >- Enable GitHub Pages
 >- Choose a theme with Jekyll
->- Use YAML front matter
+>- Use YAML [front matter](http://jekyllcn.com/docs/frontmatter/)
 >- Customize your site
 >- Create and edit blog posts
 
@@ -71,7 +77,7 @@
 打开page网址时，GitHub会根据下面的顺序来寻找首页：
 #### index.html-->index.md-->readme.md
 
-所以有了readme就能点开网址看。
+所以有了readme就能点开网址看。还能将首页放到文件夹里，需要在最开头的front matter更改固定连接permalink。
 
 ### 2. 在本地搭建预览环境
 **上面那步做到选择source就够了。**
@@ -143,13 +149,15 @@ gem "themename"
 theme: themename
 ```
 
-一个网站可以安装多个主题，但只能激活一个。
-在index的最开头加上YAML语句
+一个网站可以安装多个主题，但只能在`_config.yml`中激活一个。
+
+要让首页是主题那种好看的样子，在index的最开头加上YAML语句
 ```yaml
 ---
 layout: home #或者别的主题规定的layout
 ---
 ```
+以后很多页面都会在头部加YAML语句进行设置。前面提到过叫front matter。
 运行`bundle exec jekyll serve`查看变化。（每次`_config.yml`更改了以后都要重新运行一次）
 
 ### 4. 添加博客内容
@@ -171,6 +179,24 @@ layout: home #或者别的主题规定的layout
 ├── about.markdown
 └── index.markdown
 ```
-有个`_site`文件夹是运行环境的时候生成的，不用commit。今后可能还会用到`_layout`、`_includes`、`assets`、`_sass`。
+有个`_site`文件夹是运行Jekyll环境的时候生成的，不用commit。今后可能还会用到`_layout`、`_includes`、`assets`、`_sass`[【目录结构】](https://jekyllcn.com/docs/structure/)。
 ###### :blush:主题的其它设置和内容添加详见主题readme和它的网站。
+
 我现在要整[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)主题啦~
+## minimal mistake主题设置笔记
+大部分设置都在`_config.yml`中：默认作者、sidebar content
+网站导航在`\_data\navigation.yml`
+各种网页在`\_pages\`
+- 首页是`home.md`，布局也在里面设置
+- 里面有对全站文章分类显示的框架页面，如按年月日、按collection、按tag、按catalog
+collections分类是用文件夹进行的，如`_pets`、`_recipes`
+tag和catalog是在post头写的，区别就是tag比较随意
+广告在`\_layout\default.html`待定。。。
+图片等杂物放在`\assets\`
+作者信息在`\_data\authors.yml`，在post头中与默认作者进行切换。
+sidebar可设定为显示作者或者导航，显示作者时下方会一起显示sidebar content。
+feed没搞明白
+各文章网页头可以`_config.yml`中的defaults设置。没搞明白
+## 有用外链
+提供空白占位图的网站[placeholder.com](https://placeholder.com/)
+提供小logo和著名网站logo的网站[Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free)

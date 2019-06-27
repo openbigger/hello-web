@@ -1,20 +1,20 @@
+# 主导航栏
 main:
-  - title: "Quick-Start Guide"
-    url: /docs/quick-start-guide/
-    description: "what"
-  - title: "Posts"
-    url: /year-archive/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "Pages"
-    url: /page-archive/
-  - title: "Collections"
+  - title: "分区看"
     url: /collection-archive/
-  - title: "External Link"
+    description: "what"
+  - title: "分类看"
+    url: /categories/
+  - title: "按Tag看"
+    url: /tags/
+  - title: "按年看"
+    url: /year-archive/  
+  - title: "关于我们"
+    url: /about/
+  - title: "外部链接"
     url: https://google.com
 
+# 侧边栏固定连接sidebar
 docs:
   - title: Getting Started
     children:

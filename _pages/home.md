@@ -1,61 +1,68 @@
 ---
-layout: splash
+# 首页头
+layout: splash #这个比home好看，有块块
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/home/header-1280x720.jpg
-  actions:
-    - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"
-excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.4">Latest release v4.16.4</a></small>
-feature_row1:
-  - image_path: /assets/images/home/Ko-Chang-500x300.jpg
+  overlay_image: http://placehold.it/1280x720.jpg #/assets/images/home/header-1280x720.jpg
+  actions: #按钮
+    - label: "<i class='fas fa-download'></i> 按下去会怎样"
+      url: ""
+excerpt: > #可以写html
+  这里又可以对网站进行描述描述巴拉巴拉巴拉巴拉<br />
+  <small><a>一段小字</a></small>
+
+# 下面这些块块在手机上看都是竖着摆的，网页上一排三个
+feature_row1: # 首页头图下方三个小块
+  - image_path: http://placehold.it/500x300.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     type: "left"
     alt: "customizable"
     title: "Super customizable"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
+    url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/home/whitebear-500x300.jpeg
+  - image_path: http://placehold.it/500x300.jpg #/assets/images/home/whitebear-500x300.jpeg
     alt: "fully responsive"
     title: "Responsive layouts"
     excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
+    url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/home/Ko-Chang-500x300.jpg
+  - image_path: http://placehold.it/500x300.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     alt: "100% free"
     title: "100% free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
-    url: "/docs/license/"
+    url: ""
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
-feature_row2:
-  - image_path: /assets/images/home/Ko-Chang-500x300.jpg
-    type: "left"
+    btn_label: "Learn more"       
+#三小块下面单独放的
+feature_row2: 
+  - image_path: http://placehold.it/800x200.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     alt: "customizable"
-    title: "Super customizable"
+    title: "图在左边"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
+    url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/home/whitebear-500x300.jpeg
+feature_row3:
+  - image_path: http://placehold.it/800x300.jpg #/assets/images/home/whitebear-500x300.jpeg
     alt: "fully responsive"
-    title: "Responsive layouts"
+    title: "图在上边"
     excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
+    url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/home/Ko-Chang-500x300.jpg
+feature_row4:    
+  - image_path: http://placehold.it/800.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     alt: "100% free"
-    title: "100% free"
+    title: "图在右边"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
-    url: "/docs/license/"
+    url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"    
 ---
 {% include feature_row id="feature_row1" %}
-{% include feature_row id="feature_row2" type="left" %}
+{% include feature_row id="feature_row2" type="left"%}
+{% include feature_row id="feature_row3" type="center" %}
+{% include feature_row id="feature_row4" type="right" %}
