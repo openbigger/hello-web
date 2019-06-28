@@ -1,14 +1,15 @@
 ## 建立一个github page的基本步骤
-- [开始前需要知道的](#开始前需要知道的)
+- ## [开始前需要知道的](#开始前需要知道的)
     - [GitHub page可以和不可以](#GitHub-page可以和不可以)
     - [选择哪种主题](#选择哪种主题)
 
-- [Learning lab练手](#Learning-lab练手)
-- [建站初操作](#建站初操作)
+- ## [Learning lab练手](#Learning-lab)
+- ## [建站初操作](#建站初操作)
     1. [把一个repo变成Github Pages](#把一个repo变成Github-Pages)
     2. [在本地搭建预览环境](#在本地搭建预览环境)
     1. [选择主题及其设置](#选择主题及其设置)
     1. [添加博客内容](#添加博客内容)
+
 - [minimal mistake主题设置笔记](#minimal-mistake主题设置笔记)    
 - [有用外链](#有用外链)
 
@@ -19,10 +20,11 @@
 还能用toc来写，下次用。
 
 > :page_with_curl:Markdown里写```Markdown或者代码块用键盘1旁边的三个点点引起来```就是代码块，字就不带Markdown格式。前三个点点点后加上代码所用语言会有相应字体和颜色。注意点点点的tab位置。写一小句用`单个点`，字就有背景。
- 
+
 # 开始前需要知道的
 ## GitHub page可以和不可以
 [What is GitHub Pages?](https://help.github.com/en/articles/what-is-github-pages)
+
 ### 可以:o:
 - 三种页面user、organization、project，即三种github.io域名
 - 自己买域名来挂
@@ -93,7 +95,6 @@
         $ ruby --version
         > ruby 2.X.X
         ```
-
     1. 如果没有Ruby就要去下一个[Ruby+Devkit](https://rubyinstaller.org/downloads/)（网站推荐的那个）。
     
 1. 装Bundle
