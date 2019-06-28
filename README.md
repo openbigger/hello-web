@@ -9,39 +9,48 @@
     2. [在本地搭建预览环境](#在本地搭建预览环境)
     1. [选择主题及其设置](#选择主题及其设置)
     1. [添加博客内容](#添加博客内容)
-    
 
-> 目录写法
+- [minimal mistake主题设置笔记](#minimal-mistake主题设置笔记)    
+- [有用外链](#有用外链)
+
+> :bulb:目录写法
 - ```[目录里面的字](#要跳转到的字)```
 - ```[Big Title](#big-title)```
->##### 前后的字可以不一样，要跳转到的字的空格用“-”相连。要跳转到的地方必须是个标题，即前面要有#。
+>##### 前后的字可以不一样，要跳转到的字的空格用“-”相连。要跳转到的地方必须是个标题，即前面要有#。但目录不能是标题。成功的目录[]内的字会变色
+还能用toc来写，下次用。
 
-> Markdown里写```Markdown或者代码块用键盘1旁边的三个点点引起来```就是代码块，字就不带Markdown格式。前三个点点点后加上代码所用语言会有相应字体和颜色。注意点点点的tab位置。写一小句用`单个点`，字就有背景。
- 
+> :page_with_curl:Markdown里写```Markdown或者代码块用键盘1旁边的三个点点引起来```就是代码块，字就不带Markdown格式。前三个点点点后加上代码所用语言会有相应字体和颜色。注意点点点的tab位置。写一小句用`单个点`，字就有背景。
+
 # 开始前需要知道的
 ## GitHub page可以和不可以
 [What is GitHub Pages?](https://help.github.com/en/articles/what-is-github-pages)
-### 可以
+
+### 可以:o:
 - 三种页面user、organization、project，即三种github.io域名
 - 自己买域名来挂
 - 免费
 - 静态页面
 - 插件
+- 广告
+- 评论
+- 登录（不是很确定）
 - 本机测试 
 - 支持Markdown、html
-### 不可以
-- 不支持 PHP, Ruby, or Python（然而可以用这些来写）
-- repo不能私有
-- 不能超过1GB，访问量也有限制
+### 不可以:x:
+- 动态网站PHP, Ruby, or Python（然而可以用这些来写）
+- repo私有
+- 数据库
+- 超过1GB，访问量也有限制
+- 违法的
 ## 选择哪种主题
-主题可有很多选择如：Jekyll、hexo。先看看网上那些主题，有没有自己想要的。官方推的是Jekyll。
-
+主题可有很多选择如：Jekyll、hexo。先看看网上那些主题，有没有自己想要的。官方推的是[Jekyll](https://jekyllcn.com/)(google翻译的杰基尔:full_moon_with_face:)。
+![avatar](https://jekyllcn.com/img/octojekyll.png)
 # Learning lab练手
 加入[GitHub Pages](https://lab.github.com/githubtraining/github-pages)这个course，可以学习建立GitHub Pages的最基本的东西。
 >In this course, you’ll learn how to:
 >- Enable GitHub Pages
 >- Choose a theme with Jekyll
->- Use YAML front matter
+>- Use YAML [front matter](http://jekyllcn.com/docs/frontmatter/)
 >- Customize your site
 >- Create and edit blog posts
 
@@ -71,7 +80,7 @@
 打开page网址时，GitHub会根据下面的顺序来寻找首页：
 #### index.html-->index.md-->readme.md
 
-所以有了readme就能点开网址看。
+所以有了readme就能点开网址看。还能将首页放到文件夹里，需要在最开头的front matter更改固定连接permalink。
 
 ### 2. 在本地搭建预览环境
 **上面那步做到选择source就够了。**
@@ -86,7 +95,6 @@
         $ ruby --version
         > ruby 2.X.X
         ```
-
     1. 如果没有Ruby就要去下一个[Ruby+Devkit](https://rubyinstaller.org/downloads/)（网站推荐的那个）。
     
 1. 装Bundle
@@ -143,13 +151,15 @@ gem "themename"
 theme: themename
 ```
 
-一个网站可以安装多个主题，但只能激活一个。
-在index的最开头加上YAML语句
+一个网站可以安装多个主题，但只能在`_config.yml`中激活一个。
+
+要让首页是主题那种好看的样子，在index的最开头加上YAML语句
 ```yaml
 ---
 layout: home #或者别的主题规定的layout
 ---
 ```
+以后很多页面都会在头部加YAML语句进行设置。前面提到过叫front matter。
 运行`bundle exec jekyll serve`查看变化。（每次`_config.yml`更改了以后都要重新运行一次）
 
 ### 4. 添加博客内容
@@ -171,5 +181,39 @@ layout: home #或者别的主题规定的layout
 ├── about.markdown
 └── index.markdown
 ```
-有个`_site`文件夹是运行环境的时候生成的，不用commit。今后可能还会用到`_layout`、`_includes`、`assets`、`_sass`。
-###### 主题的其它设置和内容添加详见主题readme和它的网站。
+有个`_site`文件夹是运行Jekyll环境的时候生成的，不用commit。今后可能还会用到`_layout`、`_includes`、`assets`、`_sass`[【目录结构】](https://jekyllcn.com/docs/structure/)。
+###### :blush:主题的其它设置和内容添加详见主题readme和它的网站。
+
+我现在要整[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)主题啦~
+## minimal mistake主题设置笔记
+大部分设置都在`_config.yml`中：默认作者、sidebar content
+网站导航在`\_data\navigation.yml`
+各种网页在`\_pages\`
+- 首页是`home.md`，布局也在里面设置
+- 里面有对全站文章分类显示的框架页面，如按年月日、按collection、按tag、按catalog
+collections分类是用文件夹进行的，如`_pets`、`_recipes`
+
+tag和catalog是在post头写的，区别就是tag比较随意
+`_config.yml`中
+```yaml
+# Outputting
+permalink: /:categories/:title/
+``` 
+去掉`/:categories`就可以用中文categories了
+
+广告在`\_layout\default.html`待定。。。
+
+图片等杂物放在`\assets\`
+
+作者信息在`\_data\authors.yml`，在post头中与默认作者进行切换。
+
+sidebar可设定为显示作者或者导航，显示作者时下方会一起显示sidebar content。
+
+各文章网页头可以`_config.yml`中的defaults设置。没搞明白
+
+如果遇到html被显示出来，这是因为marddown到html转换有bug，去掉被显示那句前的空格就好了。
+
+多国语言翻译在`\_data\ui-text.yml`
+## 有用外链
+提供空白占位图的网站[placeholder.com](https://placeholder.com/)
+提供小logo和著名网站logo的网站[Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
