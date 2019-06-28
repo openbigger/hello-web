@@ -16,10 +16,10 @@ excerpt: > #可以写html
 feature_row1: # 首页头图下方三个小块
   - image_path: http://placehold.it/500x300.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     type: "left"
-    alt: "customizable"
-    title: "Super customizable"
+    alt: ""
+    title: "西部学校"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: ""
+    url: "/west/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: http://placehold.it/500x300.jpg #/assets/images/home/whitebear-500x300.jpeg

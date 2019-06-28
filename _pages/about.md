@@ -9,7 +9,8 @@ sidebar:
     text: "Some text here."
   - title: "Another Title"
     text: "More text here."
-    nav: sidebar-sample
+  - title: "显示navigation.yml里的某一组"  
+    nav: docs
 ---
 this is about
 我的sidebar上部是作者，下部是Custom sidebar content
@@ -23,4 +24,6 @@ sidebar:
     text: "Some text here."
   - title: "Another Title"
     text: "More text here."
+  - title: "doc"  
+    nav: docs  
 ```

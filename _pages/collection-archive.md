@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Posts by Collection"
+title: "按文件夹显示"
 permalink: /collection-archive/
 author_profile: true
 ---

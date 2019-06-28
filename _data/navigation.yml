@@ -1,8 +1,7 @@
-# 主导航栏
+# 主导航栏，不能加子菜单
 main:
   - title: "分区看"
-    url: /collection-archive/
-    description: "what"
+    url: /collection-archive/    
   - title: "分类看"
     url: /categories/
   - title: "按Tag看"
@@ -10,8 +9,9 @@ main:
   - title: "按年看"
     url: /year-archive/  
   - title: "关于我们"
-    url: /about/
+    url: /about/    
   - title: "外部链接"
+    description: "Google"
     url: https://google.com
 
 # 侧边栏固定连接sidebar

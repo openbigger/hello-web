@@ -48,9 +48,9 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/mmistakes"
 
-# 设置 YAML 头信息 的默认值。
+# 设置 YAML 头信息的默认值。
 defaults:
-  # _posts 里面的
+  # _posts 文件夹里面的
   - scope:
       path: "" # 一个空的字符串代表项目中所有的文件
       type: posts
@@ -61,6 +61,17 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages 文件夹里面的
+  - scope:
+      path: "" # 一个空的字符串代表项目中所有的文件
+      type: pages
+    values:
+      layout: single
+      share: true
+      related: true
+      sidebar:
+        nav: "docs"  
+  #collections    
   # _docs
   - scope:
       path: ""
@@ -98,7 +109,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Collections  
+# Collections  现在有两个文件夹
 collections:
   docs:
     output: true
@@ -107,13 +118,21 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-    # Plugins (previously gems:)
+# Outputting
+permalink: /:title/ #/:categories/:title/ #去掉categories就可以用中文categories了
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/   
+# timezone默认和本机一样。下面这句开了还要装东西才能运行。
+# timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins (previously gems:)
 plugins:
   #- jekyll-paginate
   #- jekyll-sitemap
   #- jekyll-gist
-  - jekyll-feed
-  #- jemoji
+  #- jekyll-feed
+  - jemoji
   #- jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -121,8 +140,8 @@ whitelist:
   #- jekyll-paginate
   #- jekyll-sitemap
   #- jekyll-gist
-  - jekyll-feed
-  #- jemoji
+  #- jekyll-feed
+  - jemoji
   #- jekyll-include-cache        
    
 # Reading Files

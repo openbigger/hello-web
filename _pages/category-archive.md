@@ -5,4 +5,4 @@ permalink: /categories/
 sidebar:
     nav: "docs"
 ---
-### 分类categories只能是英文，所以用tag好了
+### 中英文都能用

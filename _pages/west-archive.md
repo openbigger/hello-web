@@ -6,5 +6,4 @@ collection: west
 entries_layout: grid
 classes: wide
 ---
-
-Sample document listing for the collection `_west`.
+只显示west文件夹里面的页面。按缩略图显示。
