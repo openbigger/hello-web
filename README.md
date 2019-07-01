@@ -201,15 +201,20 @@ permalink: /:categories/:title/
 ``` 
 去掉`/:categories`就可以用中文categories了
 
-广告在`\_layout\default.html`待定。。。
+广告在`\_layout\default.html`_待定。。。_测了一下不显示，adblock倒是有反应，估计要自己账号。
+
+更改后的footer放在`\_inludes\footer.html`去掉feed和“关注”文字，源git有“关注”显示的代码，但是示例网页蜜汁没有，看源代码也没有那句，不知道哪里去掉的。。。
 
 图片等杂物放在`\assets\`
+
+favicon路径在`/_includes/head/custom.html`中设置，现在放在`\assets\images`
 
 作者信息在`\_data\authors.yml`，在post头中与默认作者进行切换。
 
 sidebar可设定为显示作者或者导航，显示作者时下方会一起显示sidebar content。
 
-各文章网页头可以`_config.yml`中的defaults设置。没搞明白
+各文章网页头可以`_config.yml`中的defaults设置。关于type的解释：The different types that are available to you are pages, posts, drafts or any collection in your site. While type is optional, you must specify a value for path when creating a scope/values pair.
+
 
 如果遇到html被显示出来，这是因为marddown到html转换有bug，去掉被显示那句前的空格就好了。
 
@@ -217,3 +222,10 @@ sidebar可设定为显示作者或者导航，显示作者时下方会一起显�
 ## 有用外链
 提供空白占位图的网站[placeholder.com](https://placeholder.com/)
 提供小logo和著名网站logo的网站[Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
+做浏览器小图标的网站[favicon generator](https://realfavicongenerator.net/)
+
+
+commit note
+加了favicon
+改了404，又和他蜜汁不一样
+加了search，用的默认免费的那款

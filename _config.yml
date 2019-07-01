@@ -15,7 +15,7 @@ repository               : # "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image used in the “Related Posts” module, e.g. "/assets/images/500x300.png"
 logo                     : http://placehold.it/88x88.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "<--logo 这里是网站头标题点我回首页 主导航-->" # overrides the website title displayed in the masthead, use " " for no title
-
+search                   : true
 # 默认作者
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
@@ -69,7 +69,7 @@ defaults:
     values:
       layout: single
       share: true
-      related: true
+      #related: true #除了pages文件夹，其它都能related
       sidebar:
         nav: "docs"  
   #collections    
