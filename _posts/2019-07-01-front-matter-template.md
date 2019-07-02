@@ -1,5 +1,6 @@
 ---
 title: "Post的头模板"
+#date: 2019-07-02 #可以写未来date
 last_modified_at: # 2016-03-09T16:20:02-05:00
 excerpt_separator: "<!--more-->" #插入这个以后列表里文章内容就只显示它之前的
 excerpt: "列表显示的摘要，没有就显示正文`<!--more-->`之前的"
@@ -25,6 +26,8 @@ tags:
 #  - tag1
   - 头模板
   - header图
+  - 主题
+  - 格式
 ---
 
 This content # 缩略图
