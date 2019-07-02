@@ -21,7 +21,7 @@ author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : http://placehold.it/150.jpg #"/assets/images/michael-rose.jpg"
   bio              : "Just another boring, tattooed, time traveling, designer."
-  location         : "Buffalo, NY"
+  location         : "Sentosa, SG"
   links:
     - label: "Made Mistakes"
       icon: "fas fa-fw fa-link"
@@ -41,20 +41,20 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/mmistakes"
+      url: "https://twitter.com/#"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mmistakes"
+      url: "https://github.com/#"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mmistakes"
+      url: "https://instagram.com/#"
 
 # 设置 YAML 头信息的默认值。
 defaults:
   # _posts 文件夹里面的
   - scope:
       path: "" # 一个空的字符串代表项目中所有的文件
-      type: posts
+      type: posts 
     values:
       layout: single
       author_profile: true

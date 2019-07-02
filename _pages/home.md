@@ -20,20 +20,20 @@ feature_row1: # 首页头图下方三个小块
   - image_path: http://placehold.it/480x240.jpg #/assets/images/home/Ko-Chang-500x300.jpg
     image_caption: "Image courtesy of [图片来自这里](https://#)"
     alt: ""
-    title: "西部学校"
+    title: "模块一"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
     url: "/west/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: http://placehold.it/400x240.jpg #/assets/images/home/whitebear-500x300.jpeg
     alt: "fully responsive"
-    title: "Responsive layouts"
+    title: "图片大小根据比例调整"
     excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: ""
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: http://placehold.it/400x300.jpg #/assets/images/home/Ko-Chang-500x300.jpg
-    alt: "100% free"
+    alt: "模块三"
     title: "100% free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
     url: ""

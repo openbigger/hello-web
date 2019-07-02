@@ -2,17 +2,17 @@
 main:
   - title: "分区看"
     url: /collection-archive/    
-  - title: "分类看"
-    url: /categories/
+  #- title: "分类看"
+  #  url: /categories/
   - title: "按Tag看"
     url: /tags/
   - title: "按年看"
     url: /year-archive/  
   - title: "关于我们"
     url: /about/    
-  - title: "外部链接"
-    description: "Google"
-    url: https://google.com
+  #- title: "外部链接"
+  #  description: "Google"
+  #  url: https://google.com
 
 # 侧边栏固定连接sidebar
 docs:
