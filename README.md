@@ -10,16 +10,20 @@
     1. [选择主题及其设置](#选择主题及其设置)
     1. [添加博客内容](#添加博客内容)
 
-- [minimal mistake主题设置笔记](#minimal-mistake主题设置笔记)    
-- [有用外链](#有用外链)
+
 
 > :bulb:目录写法
-- ```[目录里面的字](#要跳转到的字)```
-- ```[Big Title](#big-title)```
->##### 前后的字可以不一样，要跳转到的字的空格用“-”相连。要跳转到的地方必须是个标题，即前面要有#。但目录不能是标题。成功的目录[]内的字会变色
-还能用toc来写，下次用。
+>- ```[目录里面的字](#要跳转到的字)```
+>- ```[Big Title](#big-title)```
+>
+>两个括号的字可以不一样，要跳转到的字的空格用“-”相连。要跳转到的地方必须是个标题，即前面要有#。但目录不能是标题。成功的目录[]内的字会变色。目录还能用toc来写，下次用。
+
+
+>title不能被加粗但可以倾斜
 
 > :page_with_curl:Markdown里写```Markdown或者代码块用键盘1旁边的三个点点引起来```就是代码块，字就不带Markdown格式。前三个点点点后加上代码所用语言会有相应字体和颜色。注意点点点的tab位置。写一小句用`单个点`，字就有背景。
+
+>markdown在线小学堂[link](https://www.markdowntutorial.com/)
 
 # 开始前需要知道的
 ## GitHub page可以和不可以
@@ -185,35 +189,3 @@ layout: home #或者别的主题规定的layout
 ###### :blush:主题的其它设置和内容添加详见主题readme和它的网站。
 
 我现在要整[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)主题啦~
-## minimal mistake主题设置笔记
-大部分设置都在`_config.yml`中：默认作者、sidebar content
-网站导航在`\_data\navigation.yml`
-各种网页在`\_pages\`
-- 首页是`home.md`，布局也在里面设置
-- 里面有对全站文章分类显示的框架页面，如按年月日、按collection、按tag、按catalog
-collections分类是用文件夹进行的，如`_pets`、`_recipes`
-
-tag和catalog是在post头写的，区别就是tag比较随意
-`_config.yml`中
-```yaml
-# Outputting
-permalink: /:categories/:title/
-``` 
-去掉`/:categories`就可以用中文categories了
-
-广告在`\_layout\default.html`待定。。。
-
-图片等杂物放在`\assets\`
-
-作者信息在`\_data\authors.yml`，在post头中与默认作者进行切换。
-
-sidebar可设定为显示作者或者导航，显示作者时下方会一起显示sidebar content。
-
-各文章网页头可以`_config.yml`中的defaults设置。没搞明白
-
-如果遇到html被显示出来，这是因为marddown到html转换有bug，去掉被显示那句前的空格就好了。
-
-多国语言翻译在`\_data\ui-text.yml`
-## 有用外链
-提供空白占位图的网站[placeholder.com](https://placeholder.com/)
-提供小logo和著名网站logo的网站[Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free)

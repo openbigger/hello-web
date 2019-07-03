@@ -1,6 +1,6 @@
 # 主题
 # theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes" #@4.16.4
 minimal_mistakes_skin: "air" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 # 网站设置
@@ -15,13 +15,13 @@ repository               : # "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image used in the “Related Posts” module, e.g. "/assets/images/500x300.png"
 logo                     : http://placehold.it/88x88.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "<--logo 这里是网站头标题点我回首页 主导航-->" # overrides the website title displayed in the masthead, use " " for no title
-
+search                   : true
 # 默认作者
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : http://placehold.it/150.jpg #"/assets/images/michael-rose.jpg"
   bio              : "Just another boring, tattooed, time traveling, designer."
-  location         : "Buffalo, NY"
+  location         : "Sentosa, SG"
   links:
     - label: "Made Mistakes"
       icon: "fas fa-fw fa-link"
@@ -41,20 +41,20 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/mmistakes"
+      url: "https://twitter.com/#"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mmistakes"
+      url: "https://github.com/#"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mmistakes"
+      url: "https://instagram.com/#"
 
 # 设置 YAML 头信息的默认值。
 defaults:
   # _posts 文件夹里面的
   - scope:
       path: "" # 一个空的字符串代表项目中所有的文件
-      type: posts
+      type: posts 
     values:
       layout: single
       author_profile: true
@@ -69,29 +69,39 @@ defaults:
     values:
       layout: single
       share: true
-      related: true
+      #related: true #除了pages文件夹，其它都能related
       sidebar:
         nav: "docs"  
   #collections    
-  # _docs
+  #里面的页面带头image，不能有sidebar
+  # _east
   - scope:
       path: ""
-      type: docs
+      type: east
     values:
       layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "docs"
+      related: true
+      share: true
+  # _south
+  - scope:
+      path: ""
+      type: south
+    values:
+      layout: single
+      share: true
+  # _north
+  - scope:
+      path: ""
+      type: north
+    values:
+      layout: single
+      share: true
   # _west
   - scope:
       path: ""
       type: west
     values:
       layout: single
-      author_profile: false
       share: true 
 # Archives
 #  Type
@@ -110,14 +120,20 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Collections  现在有两个文件夹
+# Collections  现在有4个文件夹
 collections:
-  docs:
+  east:
     output: true
     permalink: /:collection/:path/  
   west:
     output: true
     permalink: /:collection/:path/
+  north:
+    output: true
+    permalink: /:collection/:path/  
+  south:
+    output: true
+    permalink: /:collection/:path/    
 
 # Outputting
 permalink: /:title/ #/:categories/:title/ #去掉categories就可以用中文categories了
