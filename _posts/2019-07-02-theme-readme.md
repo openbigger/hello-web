@@ -70,7 +70,9 @@ permalink: /:categories/:title/
 {: .small}
 
 ## 和markdown不一样的格式
+更详细的见[2019-07-01-markup](/markup/)
 - `{: .notice}`可以把一段话变成有背景的小字，四种颜色
+下面的代码块要一句一句包起来。
 ```yaml
 `{: .notice}`
 `{: .notice -- danger}`
