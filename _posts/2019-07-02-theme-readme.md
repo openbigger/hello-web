@@ -1,6 +1,6 @@
 ---
 title: "theme设置"
-last_modified_at: 2019-07-12T15:40:02-05:00
+last_modified_at: 2019-07-18T15:40:02-05:00
 excerpt_separator: "<!--more-->" #插入这个以后列表里文章内容就只显示它之前的
 excerpt: "minimal mistake主题设置相关信息，什么东西在哪里设置，什么东西放哪里，在哪里找等等。"
 
@@ -20,8 +20,9 @@ tags:
 - 网站导航在`/_data/navigation.yml`
 - 多国语言翻译在`/_data/ui-text.yml`
 - 各种网页在`/_pages/`
+  - about/404/contact等
   - 首页是`home.md`，feature row布局在Front matter设置
-  - 里面有对全站文章分类显示的框架页面，如按年月日、按collection、按tag、按catalog
+  - 里面有对全站文章分类显示的框架页面，特别是main导航的网页。如按年月日、按collection、按tag、按catalog
 - collections分类是用文件夹进行的，如`_pets`、`_recipes`。
 
 ## tag/category
@@ -48,10 +49,29 @@ tags:
 ## sidebar
 可设定为显示作者或者导航，显示作者时下方会一起显示sidebar content。
 
+## gitignory
+```yaml
+*.gem
+*.sublime-project
+*.sublime-workspace
+.bundle
+.DS_Store
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site
+codekit-config.json
+example/_site
+Gemfile.lock
+node_modules
+npm-debug.log*
+```
+
 ## 有用外链
 - 提供空白占位图的网站[placeholder.com](https://placeholder.com/)
 - 提供小logo和著名网站logo的网站[Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
 - 做浏览器小图标的网站[favicon generator](https://realfavicongenerator.net/)
+- 免费图片网站[Unsplash](https://unsplash.com/)
 
 ## 问题解决
 - 代码块后加回车。如果还不能正常显示，前面也加上。
