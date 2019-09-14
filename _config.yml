@@ -16,6 +16,8 @@ teaser                   : # path of fallback teaser image used in the “Relate
 logo                     : http://placehold.it/88x88.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "<--logo 这里是网站头标题点我回首页 主导航-->" # overrides the website title displayed in the masthead, use " " for no title
 search                   : true
+breadcrumbs              : false #true  # disabled by default
+
 # 默认作者
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
